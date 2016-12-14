@@ -197,8 +197,17 @@
 		<xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.InitialQuestionsStep</xmlui-binding>
 	    <workflow-editable>true</workflow-editable>
 	  </step> -->
+
+      <!--Step 2 automatic metadata import-->
+      <step>
+            <heading>submit.progressbar.prefill</heading>
+                <processing-class>org.dspace.submit.step.PrefillStep</processing-class>
+                <jspui-binding>org.dspace.app.webui.submit.step.JSPPrefillStep</jspui-binding>
+                <xmlui-binding>org.dspace.app.xmlui.aspect.submission.submit.XMLUIPrefillStep</xmlui-binding>
+            <workflow-editable>true</workflow-editable>
+      </step>
       
-      <!--Step 2 will be to Describe the item.-->
+      <!--Step 3 will be to Describe the item.-->
       <step>
         <heading>submit.progressbar.describe</heading>
         <processing-class>org.dspace.submit.step.DescribeStep</processing-class>
@@ -207,7 +216,9 @@
         <workflow-editable>true</workflow-editable>
       </step>
 
-       <!--Step 3 will be to Manage Item access.
+
+
+       <!--Step 4 will be to Manage Item access.
        <step>
            <heading>submit.progressbar.access</heading>
            <processing-class>org.dspace.submit.step.AccessStep</processing-class>
@@ -217,7 +228,7 @@
        </step>
        -->
 
-      <!--Step 4 will be to Upload the item -->
+      <!--Step 5 will be to Upload the item -->
       <step>
         <heading>submit.progressbar.upload</heading>
         <processing-class>org.dspace.submit.step.UploadStep</processing-class>
@@ -227,7 +238,7 @@
       </step>
       
 
-       <!-- Step 4 Upload Item with Embargo Features
+       <!-- Step 6 Upload Item with Embargo Features
             to enable this step, please make sure to comment-out the previous step "UploadStep"  
        <step>
            <heading>submit.progressbar.upload</heading>
@@ -238,7 +249,7 @@
        </step>
        -->
 
- 	  <!--Step 5 will be to Verify/Review everything -->
+ 	  <!--Step 7 will be to Verify/Review everything -->
  	  <step>
         <heading>submit.progressbar.verify</heading>
         <processing-class>org.dspace.submit.step.VerifyStep</processing-class>
@@ -247,7 +258,7 @@
 		<workflow-editable>true</workflow-editable>
       </step>
 
-      <!--Step 6 will be to select a Creative Commons License-->
+      <!--Step 8 will be to select a Creative Commons License-->
       <!-- Uncomment this step to allow the user to select a Creative Commons license -->
        <!--
       <step>
@@ -259,7 +270,7 @@
       </step>
       -->
 
-      <!--Step 7 will be to Sign off on the License-->
+      <!--Step 8 will be to Sign off on the License-->
       <step>
         <heading>submit.progressbar.license</heading>
         <processing-class>org.dspace.submit.step.LicenseStep</processing-class>
